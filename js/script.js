@@ -157,6 +157,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  /* ---------- Back to top ---------- */
+  const backToTop = document.getElementById('backToTop');
+  if (backToTop) {
+    backToTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+    });
+  }
+
   /* =========================================================
      JOURNEY TIMELINE — mark the current/last node active
      ========================================================= */
