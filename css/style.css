@@ -237,7 +237,7 @@ button{font-family:inherit;}
 /* =========================================================
    HERO
    ========================================================= */
-.hero{padding:96px 0 80px;}
+.hero{padding:120px 0 100px;}
 .hero-inner{
   display:grid;
   grid-template-columns:1.05fr 0.95fr;
@@ -273,7 +273,7 @@ button{font-family:inherit;}
 /* =========================================================
    SECTION SPACING
    ========================================================= */
-.section{padding:104px 0;}
+.section{padding:132px 0;}
 .section--vision{background:linear-gradient(180deg, transparent, rgba(108,99,255,0.04), transparent);}
 
 /* =========================================================
@@ -431,25 +431,39 @@ button{font-family:inherit;}
 /* =========================================================
    FEATURED PROJECTS / CASE STUDIES
    ========================================================= */
-.project-grid{margin-top:52px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.project-grid{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
 .project-card{
-  padding:30px 26px;
-  background:var(--surface);border:1px solid var(--surface-border);
+  padding:36px 30px 30px;
+  background:var(--bg-elevated);
+  border:1px solid rgba(255,255,255,0.07);
   border-radius:var(--radius-l);
+  box-shadow:0 2px 14px -6px rgba(0,0,0,0.35);
   display:flex;flex-direction:column;
-  transition:transform .4s var(--ease), border-color .4s var(--ease);
+  transition:border-color .35s var(--ease), box-shadow .35s var(--ease);
 }
-.project-card:hover{transform:translateY(-6px);border-color:rgba(245,166,35,0.35);}
-.project-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;}
+.project-card:hover{
+  border-color:rgba(255,255,255,0.14);
+  box-shadow:0 6px 22px -8px rgba(0,0,0,0.45);
+}
+.project-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;}
 .project-icon{
-  width:44px;height:44px;border-radius:12px;
+  width:38px;height:38px;border-radius:10px;
   display:flex;align-items:center;justify-content:center;
-  background:linear-gradient(140deg, rgba(245,166,35,0.16), rgba(108,99,255,0.1));
-  color:var(--accent-signal);font-size:18px;
+  background:none;
+  color:var(--text-secondary);font-size:16px;
   border:1px solid var(--surface-border);
 }
-.project-card h3{font-size:19px;margin-bottom:12px;}
-.project-card p{color:var(--text-secondary);font-size:14.5px;margin-bottom:22px;flex-grow:1;}
+.project-card h3{
+  font-family:var(--font-display);
+  font-size:21px;
+  font-weight:600;
+  line-height:1.25;
+  margin-bottom:14px;
+  color:var(--text-primary);
+}
+.project-card p{color:var(--text-secondary);font-size:14.5px;margin-bottom:24px;flex-grow:1;}
+.project-card .case-tags{margin-top:0;}
+.project-card .case-tags li{background:transparent;border-color:rgba(255,255,255,0.08);}
 
 /* =========================================================
    CERTIFICATIONS
@@ -500,6 +514,13 @@ button{font-family:inherit;}
    ========================================================= */
 .section--contact{text-align:center;}
 .contact-inner{display:flex;flex-direction:column;align-items:center;}
+.cta-panel{
+  background:var(--bg-elevated);
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:var(--radius-l);
+  box-shadow:0 2px 20px -8px rgba(0,0,0,0.4);
+  padding:72px 48px;
+}
 .contact-title{font-size:clamp(30px,4.4vw,46px);margin-top:4px;margin-bottom:16px;}
 .section--contact .section-lede{margin-left:auto;margin-right:auto;}
 
@@ -576,12 +597,13 @@ a.contact-item:hover{background:var(--surface-hover);transform:translateY(-2px);
 
 @media(max-width:640px){
   .container{padding:0 20px;}
-  .section{padding:76px 0;}
-  .hero{padding:56px 0 60px;}
+  .section{padding:96px 0;}
+  .hero{padding:70px 0 74px;}
   .focus-grid,.expertise-grid,.project-grid,.cert-grid,.insights-grid{grid-template-columns:1fr;}
   .hero-stats{gap:26px;}
   .hero-actions .btn{flex:1 1 auto;justify-content:center;}
   .case-block{padding:26px 20px;}
+  .cta-panel{padding:44px 24px;}
   .footer-inner{flex-direction:column;text-align:center;}
 }
 
