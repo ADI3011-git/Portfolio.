@@ -111,8 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const circle = document.createElementNS(ns, 'circle');
       circle.setAttribute('cx', n.x); circle.setAttribute('cy', n.y);
       circle.setAttribute('r', r);
-      circle.setAttribute('fill', isCore ? 'rgba(245,166,35,0.16)' : 'rgba(53,199,240,0.1)');
-      circle.setAttribute('stroke', isCore ? '#F5A623' : '#35C7F0');
+      circle.setAttribute('fill', isCore ? 'rgba(227,28,61,0.06)' : 'rgba(30,79,214,0.05)');
+      circle.setAttribute('stroke', isCore ? '#E31C3D' : '#1E4FD6');
       circle.setAttribute('stroke-width', isCore ? 2 : 1.4);
       g.appendChild(circle);
 
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < signalCount; i++) {
       const dot = document.createElementNS(ns, 'circle');
       dot.setAttribute('r', 3.2);
-      dot.setAttribute('fill', i % 2 === 0 ? '#F5A623' : '#35C7F0');
+      dot.setAttribute('fill', i % 2 === 0 ? '#E31C3D' : '#1E4FD6');
       dot.setAttribute('class', 'graph-signal');
       signalsG.appendChild(dot);
       animateSignal(dot, edges, byId, i * 900);
